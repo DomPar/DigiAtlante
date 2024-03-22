@@ -8,6 +8,10 @@ const {
     syncModels
 } = require('./database/index')
 
+const {
+    addRelations
+} = require('./database/relations')
+
 const connectToDB = async () => {
     const User = require('./api/models/user.model')
     await checkDB()
@@ -36,5 +40,6 @@ const startExpress = () => {
 
 ;(async() => {
     await connectToDB()
+    addRelations()
     startExpress()
 }) ()
