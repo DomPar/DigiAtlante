@@ -7,7 +7,7 @@ const digiRouter = require('./digimon.router')
 
 router.use('/auth', authRouter)
 router.use('/user', userRouter)
-router.use('/digimon', userRouter)
+router.use('/digimon', digiRouter)
 
 
 

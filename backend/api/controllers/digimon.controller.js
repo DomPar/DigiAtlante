@@ -32,13 +32,13 @@ const getAllDigimons = async (req, res) => {
     }
 }
 
+
 const getOneDigimon = async (req, res) => {
     try{
-        const digimons = await Digi.findByPk(req.params.id)
-
+        const digimon = await Digi.findByPk(req.params.id)
         res.status(200).json({
             message: 'One Digimon',
-            result: digimons
+            result: digimon
         })
     }catch(error){
     res.status(500).json({
@@ -94,10 +94,51 @@ const deleteDigimon = async (req, res) => {
     }
 }
 
+const addPreEvo = async (req, res) => {
+    try {
+        const currentDigi = await Digi.findByPk(req.body.parentId);
+        const preEvoDigi = await Digi.findByPk(req.body.preevoId);
+        
+        await preEvoDigi.addParentPre(currentDigi)
+        // await currentDigi.addChildPre(preEvoDigi)
+        
+        res.status(200).json({
+            message: 'Evo set succesfully',
+            result: req.body
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error setting evolution Digimon',
+            result: error
+        })
+    }
+}
+
+const addEvo = async (req, res) => {
+    try {
+        const currentDigi = await Digi.findByPk(req.body.parentId);
+        const evoDigi = await Digi.findByPk(req.body.evoId);
+        
+        await evoDigi.addParentEvo(currentDigi)
+        
+        res.status(200).json({
+            message: 'Evo set succesfully',
+            result: req.body
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error setting evolution Digimon',
+            result: error
+        })
+    }
+}
+
 module.exports= {
 createDigimon,
 getAllDigimons,
 getOneDigimon,
 updateDigimon,
-deleteDigimon
+deleteDigimon,
+addPreEvo,
+addEvo,
 }
