@@ -100,7 +100,6 @@ const addPreEvo = async (req, res) => {
         const preEvoDigi = await Digi.findByPk(req.body.preevoId);
         
         await preEvoDigi.addParentPre(currentDigi)
-        // await currentDigi.addChildPre(preEvoDigi)
         
         res.status(200).json({
             message: 'Evo set succesfully',
