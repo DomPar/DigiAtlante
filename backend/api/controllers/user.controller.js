@@ -140,7 +140,7 @@ const deleteUser = async (req, res) => {
 
     } catch (error) {
         res.status(500).json({
-            message: 'Error updating User',
+            message: 'Error deleting User',
             result: error 
             })
     }
