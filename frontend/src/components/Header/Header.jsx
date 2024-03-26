@@ -4,14 +4,14 @@ import './Header.css'
 const Header = () => {
     const navigate = useNavigate();
     return (
-    <div id='containerHeader'>
+    <div id='containerHeader' className='flex items-center'>
         <div id='logo'>
-        <p>loguito</p>
+        <button onClick={navigate('/')}>Loguito</button>
         </div>
         <div id='navbar'>
-         <button onClick={navigate('/')}>Texto1</button>
-         <button onClick={navigate('/')}>Texto2</button>
-         <button onClick={navigate('/')}>Texto3</button>
+         <button onClick={navigate('/')}>DigiDex</button>
+         <button onClick={navigate('/')}>API</button>
+         <button onClick={navigate('/')}>About Us</button>
         </div>
     </div>
   )
