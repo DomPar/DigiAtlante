@@ -13,7 +13,7 @@ const router = createBrowserRouter([
                 element: <Home/>
             },
             {
-                path: '/file',
+                path: '/file/:digiId',
                 element: <File/>
             }
         ]
