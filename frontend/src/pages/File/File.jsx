@@ -21,7 +21,7 @@ const File = () => {
       <div id="digiImageContainer" className='bg-green-100 w-full h-full flex justify-center items-center'>
         <div id="digiImageDevice" className='w-4/5 h-4/5 bg-[url("https://lozshop.com/wp-content/uploads/2021/07/SC-5009-Digimon-Digivice.png")] bg-no-repeat	bg-center flex justify-center items-center'>
           <div id="digiImage" className='flex justify-center items-center'>
-            <img src={digi.image} alt="" className='w-88 h-88'/>
+            <img src={digi.image} alt="" className='w-3/5 h-3/5'/>
           </div>
         </div>
       </div>
