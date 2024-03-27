@@ -6,7 +6,9 @@ const Header = () => {
     return (
     <div id='containerHeader' className='flex items-center'>
         <div id='logo'>
-        <button onClick={navigate('/')}>Loguito</button>
+        <button onClick={navigate('/')} className='w-56 h-56'>
+          <img src="\image\logo.png" alt="logo" />
+        </button>
         </div>
         <div id='navbar'>
          <button onClick={navigate('/')}>DigiDex</button>
