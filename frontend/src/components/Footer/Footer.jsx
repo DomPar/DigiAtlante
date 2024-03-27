@@ -3,7 +3,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <div id='containerFooter'>Footer</div>
+    <div id='containerFooter' className='bg-transparent flex justify-center items-center h-10'>Footer</div>
   )
 }
 
