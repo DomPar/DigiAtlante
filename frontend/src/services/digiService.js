@@ -8,5 +8,12 @@ const getOneDigi = async (id) => {
         console.log(error.response.data)
     }
 }
-
-export {getOneDigi}
+const getAllDigi = async() => {
+    try {
+        const {digimon} = await api.get('/digimon')
+        return  digimon
+    } catch (error) {
+        console.log(error)
+    }
+}
+export {getOneDigi, getAllDigi}
