@@ -19,9 +19,9 @@ const File = () => {
   return (
     <div id='containerFile' className='w-full h-full bg-orange-100 flex'>
       <div id="digiImageContainer" className='bg-green-100 w-full h-full flex justify-center items-center'>
-        <div id="digiImageDevice" className='w-4/5 h-4/5 bg-[url("https://lozshop.com/wp-content/uploads/2021/07/SC-5009-Digimon-Digivice.png")] bg-no-repeat	bg-center flex justify-center items-center'>
+        <div id="digiImageDevice" className='w-4/5 h-4/5 bg-[url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/58c8e6d1-3f1f-4efc-9523-143fe9f1947e/de2dpfp-4f597a34-87f9-49cf-b13d-317a46a3d0eb.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU4YzhlNmQxLTNmMWYtNGVmYy05NTIzLTE0M2ZlOWYxOTQ3ZVwvZGUyZHBmcC00ZjU5N2EzNC04N2Y5LTQ5Y2YtYjEzZC0zMTdhNDZhM2QwZWIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qmzGlnUdl3xX04AcZ-gTlzlRC0viJkD4_XiyVt-9t4w")] bg-no-repeat bg-contain bg-center flex justify-center items-center'>
           <div id="digiImage" className='flex justify-center items-center'>
-            <img src={digi.image} alt="" className='w-3/5 h-3/5'/>
+            <img src={digi.image} alt="" className='w-4/5 h-4/5'/>
           </div>
         </div>
       </div>
