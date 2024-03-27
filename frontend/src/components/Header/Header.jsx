@@ -10,7 +10,7 @@ const Header = () => {
           <img src="\image\logo.png" alt="logo" />
         </button>
         </div>
-        <div id='navbar'>
+        <div id='navbar' className=''>
          <button onClick={navigate('/')}>DigiDex</button>
          <button onClick={navigate('/')}>API</button>
          <button onClick={navigate('/')}>About Us</button>
