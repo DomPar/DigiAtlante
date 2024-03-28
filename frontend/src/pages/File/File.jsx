@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
-import { getOneDigi } from '../../services/digiService';
+import { getAllPre, getAllEvo, getAllVar, getOneDigi } from '../../services/digiService';
+import DigiPreCard from '../../DigiPreCard/DigiPreCard';
+
 
 
 const File = () => {
   const [digi, setDigi] = useState({});
+  const [pre, setPre] = useState([])
+  const [evos, setEvos] = useState([])
   const {digiId} = useParams();
 
   useEffect(() => {
@@ -13,8 +17,41 @@ const File = () => {
       setDigi(result)
     }
     getDigi();
-  }, [])
+  }, [digiId])
 
+  useEffect(() => {
+      
+    const getPre = async () => {
+       const {result} = await getAllPre(digiId)
+       console.log(result[0].ChildPre)
+       setPre(result[0].ChildPre)
+    }
+    getPre()
+   }, [digiId])
+
+  const showPre = () => {
+    const result = pre.map((preevo)=>{
+      return <DigiPreCard id={preevo.id} name={preevo.name} image={preevo.image}/>
+  })
+  return result
+  }
+
+  useEffect(() => {
+      
+    const getEvos = async () => {
+       const {result} = await getAllEvo(digiId)
+       console.log(result[0].ChildEvo)
+       setEvos(result[0].ChildEvo)
+    }
+    getEvos()
+  }, [digiId])
+  
+  const showEvo = () => {
+    const result = evos.map((evo)=>{
+      return <DigiPreCard id={evo.id} name={evo.name} image={evo.image}/>
+  })
+  return result
+  }
 
   return (
     <div id='containerFile' className='w-full h-full flex'>
@@ -32,18 +69,18 @@ const File = () => {
         <div id="digiType" className='h-10 w-2/5 pl-2 rounded-lg flex items-center'>Type: {digi.type}</div>
         <div id="digiAtributte" className='h-10 w-2/5 pl-2 rounded-lg flex items-center'>Attribute: {digi.atributte}</div>
         <div id="digiAttack" className='h-10 w-2/5 pl-2 rounded-lg flex items-center'>Attack: {digi.attack}</div>
-        <div id="digiDescription" className='h-32 w-4/5 pl-2 rounded-lg'>{digi.description}</div>
+        <div id="digiDescription" className='h-32 w-full pl-2 rounded-lg'>{digi.description}</div>
         <div id="preEvoDigi" className='h-32 w-full pl-2 border border-sky-500'>
           <div>Pre-Evolutions:</div>
-          <div></div>
+          <div className='flex'>{showPre()}</div>
         </div>
         <div id="evoDigi" className='h-32 w-full pl-2 border border-sky-500'>
           <div>Evolutions:</div>
-          <div></div>
+          <div className='flex'>{showEvo()}</div>
         </div>
         <div id="variantDigi" className='h-32 w-full pl-2 border border-sky-500'>
           <div>Variants:</div>
-          <div></div>
+          <div className='flex'>{showPre()}</div>
         </div>
       </div>      
     </div>

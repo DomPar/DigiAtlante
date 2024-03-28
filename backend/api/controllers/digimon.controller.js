@@ -32,6 +32,75 @@ const getAllDigimons = async (req, res) => {
     }
 }
 
+const getAllPreEvo = async (req, res) => {
+    try{
+        const digimons = await Digi.findAll({
+            where: {
+                id: req.params.id
+            },
+            include: {
+                model: Digi,
+                as: "ChildPre"
+            }
+        })
+        res.status(200).json({
+            message: 'Here are all Digimons',
+            result: digimons
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error getting digimons',
+            result: error
+        })
+    }
+}
+
+const getAllEvo = async (req, res) => {
+    try{
+        const digimons = await Digi.findAll({
+            where: {
+                id: req.params.id
+            },
+            include: {
+                model: Digi,
+                as: "ChildEvo"
+            }
+        })
+        res.status(200).json({
+            message: 'Here are all Digimons',
+            result: digimons
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error getting digimons',
+            result: error
+        })
+    }
+}
+
+const getAllVar = async (req, res) => {
+    try{
+        const digimons = await Digi.findAll({
+            where: {
+                id: req.params.id
+            },
+            include: {
+                model: Digi,
+                as: "ChildVar"
+            }
+        })
+        res.status(200).json({
+            message: 'Here are all Digimons',
+            result: digimons
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error getting digimons',
+            result: error
+        })
+    }
+}
+
 
 const getOneDigimon = async (req, res) => {
     try{
@@ -140,4 +209,7 @@ updateDigimon,
 deleteDigimon,
 addPreEvo,
 addEvo,
+getAllPreEvo,
+getAllEvo,
+getAllVar
 }

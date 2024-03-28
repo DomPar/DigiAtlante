@@ -16,4 +16,30 @@ const getAllDigi = async() => {
         console.log(error)
     }
 }
-export {getOneDigi, getAllDigi}
+const getAllPre = async(id) => {
+    try {
+        const {data} = await api.get(`/digimon/pre/${id}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+const getAllEvo= async(id) => {
+    try {
+        const {data} = await api.get(`/digimon/evo/${id}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+const getAllVar = async(id) => {
+    try {
+        const {data} = await api.get(`/digimon/var/${id}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+export {getOneDigi, getAllDigi, getAllPre, getAllEvo, getAllVar}
