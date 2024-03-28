@@ -17,25 +17,26 @@ const lkDomi = () => {
 };
 
   return (
-    <div id="containerAbout">
+    <div id="containerAbout" className='flex flex-col'>
         <div id="aboutUs">
+            <h1>ATLANTE</h1>
             {/* imagen nuestra */}
-            <h1>NOMBRE NUESTRO</h1>
             <img src="" alt="" />
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales, dui ac vehicula sollicitudin, purus dolor pretium mi, non tincidunt felis lorem vel velit.
-                Vivamus dignissim quam nec purus dictum sollicitudin. Proin a fringilla tortor, quis bibendum nibh. Morbi molestie, leo id mollis egestas, quam eros sodales augue,
-                eget gravida elit justo eget urna. Nam bibendum volutpat tincidunt
+                Somos full-stack developers que estudiamos y nos conocimos en Reboot Academy, tras la experiencia empezamos a trabajar juntos en los diferentes proyectos
             </p>
         </div>
-        <div id="aaron">
-            <p></p>
-        <button onClick={lkAaron} className=''><LinkedInIcon/></button>
-        <button onClick={() => handleClick('/')}>CV</button>
-        </div>
-        <div id="domi">
-        <button onClick={lkDomi} className=''><LinkedInIcon/></button>
-        <button onClick={() => handleClick('/')} className=''>CV</button>
+        <div className='flex justify-evenly'>
+          <div id="aaron">
+              <h3>Aarón González Santana</h3>
+          <button onClick={lkAaron} className=''><LinkedInIcon/></button>
+          <button onClick={() => handleClick('/')}>CV</button>
+          </div>
+          <div id="domi" >
+          <h3>Domingo Pardo Santana</h3>
+          <button onClick={lkDomi} className=''><LinkedInIcon/></button>
+          <button onClick={() => handleClick('/')} className=''>CV</button>
+          </div>
         </div>
     </div>
   )

@@ -21,8 +21,8 @@ const Digidex = () => {
         return result
     }
   return (
-    <div className="pt-8 ">
-      <div className="flex justify-center items-center gap-8">
+    <div className="pt-8">
+      <div className="flex flex-wrap justify-center items-center gap-8">
         {digiDex()}
       </div>
     </div>

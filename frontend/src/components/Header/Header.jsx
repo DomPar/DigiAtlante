@@ -16,7 +16,7 @@ const Header = () => {
           <img src="\image\logo.png" alt="logo" />
         </button>
       </div>
-      <div id='navbar' className='flex gap-8 flex-row'>
+      <div id='navbar' className='flex gap-8 flex-row text-white'>
         <button onClick={() => handleClick('/digidex')} className=''>DigiDex</button>
         <button onClick={() => handleClick('/')}>API</button>
         <button onClick={() => handleClick('/aboutus')}>About Us</button>
