@@ -3,6 +3,7 @@ import App from "../pages/App/App.jsx";
 import Home from "../pages/Home/Home.jsx";
 import File from "../pages/File/File.jsx";
 import AboutUs from "../pages/AboutUs/AboutUs.jsx";
+import Digidex from "../pages/Digidex/Digidex.jsx";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
             {
                 path: '/aboutus',
                 element: <AboutUs/>
+            },
+            {
+                path: '/digidex',
+                element: <Digidex/>
             }
         ]
     } 
