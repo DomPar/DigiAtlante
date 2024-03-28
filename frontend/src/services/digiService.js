@@ -10,8 +10,8 @@ const getOneDigi = async (id) => {
 }
 const getAllDigi = async() => {
     try {
-        const {digimon} = await api.get('/digimon')
-        return  digimon
+        const {data} = await api.get('/digimon/')
+        return data
     } catch (error) {
         console.log(error)
     }

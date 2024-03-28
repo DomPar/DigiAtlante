@@ -6,6 +6,7 @@ const Digidex = () => {
     const[digis, setDigis] = useState([])
 
     useEffect(() => {
+      
      const GetDigis = async () => {
         const {result} = await getAllDigi()
         setDigis(result)
@@ -15,13 +16,15 @@ const Digidex = () => {
 
     const digiDex =() =>{
         const result = digis.map((digi)=>{
-            return <DigiCard digi={digi}/>
+            return <DigiCard id={digi.id} name={digi.name} image={digi.image}/>
         })
         return result
     }
   return (
-    <div>
+    <div className="pt-8 ">
+      <div className="flex justify-center items-center gap-8">
         {digiDex()}
+      </div>
     </div>
   )
 }

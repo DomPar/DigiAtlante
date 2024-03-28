@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react"
 
-const DigiCard = ({digi}) => {
+const DigiCard = ({id, name, image}) => {
+
+
+
   return (
-    <div>
-        {digi.name}
+    <div >
+      <div id="containerCard" className="flex flex-col items-center">
+        <img src={image} alt="imagen digimon" className=""/>
+        <p>{name}</p>
+      </div>
     </div>
   )
 }
