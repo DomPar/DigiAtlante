@@ -5,6 +5,7 @@ import File from "../pages/File/File.jsx";
 import AboutUs from "../pages/AboutUs/AboutUs.jsx";
 import Digidex from "../pages/Digidex/Digidex.jsx";
 import Create from "../pages/Create/Create.jsx";
+import Login from "../pages/Login/Login.jsx";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: '/create',
                 element: <Create/>
+            },
+            {
+                path: '/login',
+                element: <Login/>
             }
         ]
     } 
