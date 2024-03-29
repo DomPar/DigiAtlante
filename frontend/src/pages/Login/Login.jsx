@@ -22,7 +22,7 @@ const Login = () => {
   return (
     <div className='flex justify-center items-center h-full '>
       <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center w-1/5 gap-2 border bg-[#ffccdd] border-pink-500 py-6 shadow-2xl'>
-            <h1 className="">LOGIN</h1>
+            <h1 className="text-3xl pb-2">LOGIN</h1>
             <label >Email:</label>
             <input type="email" id="email" placeholder=" email" name="email" onChange={(e) => setEmail(e.target.value)} required />
             <label >Password:</label>
