@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import { introduceDigi } from '../../services/digiService'
+import { useNavigate } from 'react-router-dom'
 
 const Create = () => {
+    const navigate = useNavigate();
+
     const [name, setName] = useState('')
     const [level, setLevel] = useState('')
     const [type, setType] = useState('')
     const [attribute, setAttribute] = useState('')
     const [attack, setAttack] = useState('')
     const [description, setDescription] = useState('')
+
 
 
     const sendData = async () =>{
@@ -26,8 +30,10 @@ const Create = () => {
     return (
         <div className='flex flex-col justify-center items-center h-full'>
             <div id="seleccionAccion" className='flex h-[20vh] w-full justify-center items-center'>
-                <p className='bg-rose-200 w-[400px] text-center'>Introduce Digi</p>
-                <p className='bg-rose-100 w-[400px] text-center'>Relate Digi</p>
+                <p className='bg-rose-100 w-[50px] h-[25px] text-center'></p>
+                <p onClick={()=>{navigate('/create')}} className='bg-rose-200 w-[350px] h-[25px] text-center cursor-pointer'>Introduce Digi</p>
+                <p onClick={()=>{navigate('/relate')}} className='bg-rose-100 w-[350px] h-[25px] text-center cursor-pointer'>Relate Digi</p>
+                <p className='bg-rose-100 w-[50px] h-[25px] text-center'></p>
             </div>
             <div className='flex justify-center items-start center w-full h-[80vh]'>
                 <img src={`https://digi-api.com/images/digimon/w/${name}.png`} alt="" className='w-1/5'/>
