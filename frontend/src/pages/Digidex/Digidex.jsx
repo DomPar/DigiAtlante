@@ -7,11 +7,11 @@ const Digidex = () => {
 
     useEffect(() => {
       
-     const GetDigis = async () => {
+     const getDigis = async () => {
         const {result} = await getAllDigi()
         setDigis(result)
      }
-    GetDigis()
+    getDigis()
     }, [])
 
     const digiDex =() =>{

@@ -1,5 +1,14 @@
 import api from "./config";
 
+const introduceDigi = async (body) => {
+    try {
+        const {data} = await api.post('/digimon', body)
+        return data
+    } catch (error) {
+        console.log(error.response.data)
+    }
+}
+
 const getOneDigi = async (id) => {
     try {
         const {data} = await api.get(`/digimon/${id}`)
@@ -42,4 +51,4 @@ const getAllVar = async(id) => {
 }
 
 
-export {getOneDigi, getAllDigi, getAllPre, getAllEvo, getAllVar}
+export {getOneDigi, getAllDigi, getAllPre, getAllEvo, getAllVar, introduceDigi}
