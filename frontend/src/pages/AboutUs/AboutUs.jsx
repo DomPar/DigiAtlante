@@ -17,16 +17,16 @@ const lkDomi = () => {
 };
 
   return (
-    <div id="containerAbout" className='flex flex-col'>
+    <div id="containerAbout" className='flex flex-col items-center'>
         <div id="aboutUs">
             <h1>ATLANTE</h1>
             {/* imagen nuestra */}
             <img src="" alt="" />
             <p>
-                Somos full-stack developers que estudiamos y nos conocimos en Reboot Academy, tras la experiencia empezamos a trabajar juntos en los diferentes proyectos
-            </p>
+            Somos desarrolladores full-stack que nos conocimos mientras cursábamos el programa de Full-Stack Web & Mobile Development en Reboot Academy.
+             Tras completar esta experiencia formativa, decidimos unir fuerzas y trabajar juntos en diversos proyectos.</p>
         </div>
-        <div className='flex justify-evenly'>
+        <div className='flex gap-96'>
           <div id="aaron">
               <h3>Aarón González Santana</h3>
           <button onClick={lkAaron} className=''><LinkedInIcon/></button>
