@@ -69,18 +69,18 @@ const File = () => {
         <div id="digiType" className='h-10 w-2/5 pl-2 rounded-lg flex items-center'>Type: {digi.type}</div>
         <div id="digiAtributte" className='h-10 w-2/5 pl-2 rounded-lg flex items-center'>Attribute: {digi.atributte}</div>
         <div id="digiAttack" className='h-10 w-2/5 pl-2 rounded-lg flex items-center'>Attack: {digi.attack}</div>
-        <div id="digiDescription" className='h-32 w-full pl-2 rounded-lg'>{digi.description}</div>
-        <div id="preEvoDigi" className='h-32 w-full pl-2 border border-sky-500'>
+        <div id="digiDescription" className='h-32 w-5/6 pl-2 rounded-lg'>{digi.description}</div>
+        <div id="preEvoDigi" className='h-32 w-full pl-2'>
           <div>Pre-Evolutions:</div>
-          <div className='flex'>{showPre()}</div>
+          <div className='flex gap-2'>{showPre()}</div>
         </div>
-        <div id="evoDigi" className='h-32 w-full pl-2 border border-sky-500'>
+        <div id="evoDigi" className='h-32 w-full pl-2'>
           <div>Evolutions:</div>
-          <div className='flex'>{showEvo()}</div>
+          <div className='flex gap-2'>{showEvo()}</div>
         </div>
-        <div id="variantDigi" className='h-32 w-full pl-2 border border-sky-500'>
+        <div id="variantDigi" className='h-32 w-full pl-2'>
           <div>Variants:</div>
-          <div className='flex'>{showPre()}</div>
+          <div className='flex gap-2'>{showPre()}</div>
         </div>
       </div>      
     </div>
