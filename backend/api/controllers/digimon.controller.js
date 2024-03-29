@@ -14,6 +14,24 @@ const createDigimon = async (req, res) => {
             result: error
         })
     }
+}    
+
+const introduceDigi = async (req, res) => {
+
+    try{
+        const digimon = await Digi.create(req.body, {
+            fields: ['name','level','type','atributte','image','attack','description']
+          })
+        res.status(200).json({
+            message:'Digimon created',
+            result: digimon
+        })
+    } catch (error) {
+        res.status(500).json({
+            message:'error creating digimon',
+            result: error
+        })
+    }
 }
 
 const getAllDigimons = async (req, res) => {
@@ -210,5 +228,6 @@ addPreEvo,
 addEvo,
 getAllPreEvo,
 getAllEvo,
-getAllVar
+getAllVar,
+introduceDigi
 }

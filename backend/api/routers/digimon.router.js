@@ -10,10 +10,13 @@ const {
     deleteDigimon,
     getAllPreEvo,
     getAllEvo,
-    getAllVar,    
+    getAllVar,
+    introduceDigi,    
 } = require('../controllers/digimon.controller')
 
 router.post('/', createDigimon)
+
+router.post('/digimon', introduceDigi)
 
 router.post('/pre', addPreEvo)
 
