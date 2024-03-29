@@ -20,7 +20,7 @@ const Header = () => {
         <button onClick={() => handleClick('/digidex')} className=''>DigiDex</button>
         <button onClick={() => handleClick('/')}>API</button>
         <button onClick={() => handleClick('/aboutus')}>About Us</button>
-        <button onClick={() => handleClick('/')}>Create</button>
+        <button onClick={() => handleClick('/create')}>Create</button>
         <button onClick={() => handleClick('/')}>Upload</button>
       </div>
       <div>

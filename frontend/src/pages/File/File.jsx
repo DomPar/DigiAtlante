@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import { getAllPre, getAllEvo, getAllVar, getOneDigi } from '../../services/digiService';
-import DigiPreCard from '../../DigiPreCard/DigiPreCard';
+import DigiPreCard from '../../components/DigiPreCard/DigiPreCard';
 
 
 
