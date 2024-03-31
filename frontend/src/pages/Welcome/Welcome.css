@@ -1,0 +1,44 @@
+.side {
+    overflow: hidden;
+    transition: width 0.5s ease; 
+  }
+  
+  .side.show-side1 {
+    width: 100%; 
+  }
+  
+  .side.show-side2 {
+    width: 100%; 
+  }
+  
+  #side1, #side2 {
+    width: 100%; 
+  }
+  
+  #side1{
+    /* background-image: url(/image/img1.jpg);  */
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.leftArrow {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rightArrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.welcomeH1{
+  position: absolute;
+  right: 50%;
+}
