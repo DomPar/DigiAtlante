@@ -68,4 +68,13 @@ const addEvo = async (body) => {
     }
 }
 
-export {getOneDigi, getAllDigi, getAllPre, getAllEvo, getAllVar, introduceDigi, addPre, addEvo}
+const addVar = async (body) => {
+    try {
+        const {data} = await api.post('/digimon/var', body)
+        return data
+    } catch (error) {
+        console.log(error.response.data)
+    }
+}
+
+export {getOneDigi, getAllDigi, getAllPre, getAllEvo, getAllVar, introduceDigi, addPre, addEvo, addVar}

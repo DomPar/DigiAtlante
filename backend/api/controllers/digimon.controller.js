@@ -218,6 +218,25 @@ const addEvo = async (req, res) => {
     }
 }
 
+const addVar = async (req, res) => {
+    try {
+        const currentDigi = await Digi.findByPk(req.body.parentId);
+        const varDigi = await Digi.findByPk(req.body.variantId);
+        
+        await varDigi.addParentVar(currentDigi)
+        
+        res.status(200).json({
+            message: 'Evo set succesfully',
+            result: req.body
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error setting variant Digimon',
+            result: error
+        })
+    }
+}
+
 module.exports= {
 createDigimon,
 getAllDigimons,
@@ -226,6 +245,7 @@ updateDigimon,
 deleteDigimon,
 addPreEvo,
 addEvo,
+addVar,
 getAllPreEvo,
 getAllEvo,
 getAllVar,

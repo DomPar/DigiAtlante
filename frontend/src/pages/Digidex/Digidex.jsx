@@ -15,8 +15,8 @@ const Digidex = () => {
     }, [])
 
     const digiDex =() =>{
-        const result = digis.map((digi)=>{
-            return <DigiCard id={digi.id} name={digi.name} image={digi.image}/>
+        const result = digis.map((digi, index)=>{
+            return <DigiCard key={index} id={digi.id} name={digi.name} image={digi.image}/>
         })
         return result
     }
