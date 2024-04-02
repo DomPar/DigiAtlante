@@ -10,6 +10,7 @@ import Welcome from "../pages/Welcome/Welcome.jsx";
 import Api from "../pages/Api/Api.jsx";
 import ApiGetAll from "../pages/Api/ApiGetAll.jsx";
 import ApiGetOne from "../pages/Api/ApiGetOne.jsx";
+import ApiGetAllByLevel from "../pages/Api/ApiGetAllByLevel.jsx";
 const router = createBrowserRouter([
     {
         path: '/',
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
     {
         path: '/api/digimon/:digiId',
         element: <ApiGetOne/>
+    }, 
+    {
+        path: '/api/digimon/level/:level',
+        element: <ApiGetAllByLevel/>
     }, 
 ])
 

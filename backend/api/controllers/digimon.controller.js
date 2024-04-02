@@ -37,10 +37,27 @@ const introduceDigi = async (req, res) => {
 
 const getAllDigimons = async (req, res) => {
     try{
-        console.log(req.query)
         const { search } = req.query;
         const condition = search ? { name: { [Op.like]: `%${search}%` } } : {};
         const digimons = await Digi.findAll({ where: condition });
+        res.status(200).json({
+            message: 'Here are all Digimons',
+            result: digimons
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error getting digimons',
+            result: error
+        })
+    }
+}
+
+const getAllDigimonsByLevel = async (req, res) => {
+    try{
+        const { lvl } = req.query;
+        const digimons = await Digi.findAll({
+            where: {level: lvl.level.replace('_',' ')}
+        });
         res.status(200).json({
             message: 'Here are all Digimons',
             result: digimons
@@ -265,5 +282,6 @@ addVar,
 getAllPreEvo,
 getAllEvo,
 getAllVar,
-introduceDigi
+introduceDigi,
+getAllDigimonsByLevel
 }

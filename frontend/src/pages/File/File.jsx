@@ -18,7 +18,6 @@ const File = () => {
       setDigi(result)
     }
     getDigi();
-    console.log(digiId)
   }, [digiId])
 
   useEffect(() => {

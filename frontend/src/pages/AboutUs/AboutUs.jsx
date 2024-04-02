@@ -23,22 +23,23 @@ const lkDomi = () => {
               <h1 className='w-[400px]'>ATLANTE</h1>
               <p className='w-[400px]'>Somos desarrolladores full-stack que nos conocimos mientras cursábamos el programa de Full-Stack Web & Mobile Development en Reboot Academy.
               Tras completar esta experiencia formativa, decidimos unir fuerzas y trabajar juntos en diversos proyectos. Atlante nace de la necesididad de poner en practica todo lo aprendido durante la experiencia del bootcamp y de poner en prácticas nuevas tecnologías.</p>
+              <div className='flex w-[600px] justify-start pt-24 gap-8'>
+                <div id="aaron">
+                  <h3>Aarón González Santana</h3>
+                  <button onClick={lkAaron} className=''><LinkedInIcon/></button>
+                  <button onClick={() => handleClick('/')}>CV</button>
+                </div>
+                <div id="domi" >
+                  <h3>Domingo Pardo Santana</h3>
+                  <button onClick={lkDomi} className=''><LinkedInIcon/></button>
+                  <button onClick={() => handleClick('/')} className=''>CV</button>
+                </div>
+              </div>
             </div>
             {/* imagen nuestra */}
             <img src="" alt="" className='size-[400px] '/>
         </div>
-        <div className='flex w-[1000px] justify-around pt-24'>
-          <div id="aaron">
-              <h3>Aarón González Santana</h3>
-          <button onClick={lkAaron} className=''><LinkedInIcon/></button>
-          <button onClick={() => handleClick('/')}>CV</button>
-          </div>
-          <div id="domi" >
-          <h3>Domingo Pardo Santana</h3>
-          <button onClick={lkDomi} className=''><LinkedInIcon/></button>
-          <button onClick={() => handleClick('/')} className=''>CV</button>
-          </div>
-        </div>
+        
     </div>
   )
 }
