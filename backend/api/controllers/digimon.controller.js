@@ -125,7 +125,7 @@ const getAllVar = async (req, res) => {
 
 const getOneDigimon = async (req, res) => {
     try{
-        if (typeof req.params.id == 'number'){
+        if (typeof (Number(req.params.id)) === 'number'){
             const digimon = await Digi.findByPk(req.params.id)
             res.status(200).json({
                 message: 'One Digimon',
