@@ -1,4 +1,5 @@
 const Digi = require('../models/digimon.model')
+const { Op } = require('sequelize');
 
 const createDigimon = async (req, res) => {
 
@@ -36,7 +37,10 @@ const introduceDigi = async (req, res) => {
 
 const getAllDigimons = async (req, res) => {
     try{
-        const digimons = await Digi.findAll()
+        console.log(req.query)
+        const { search } = req.query;
+        const condition = search ? { name: { [Op.like]: `%${search}%` } } : {};
+        const digimons = await Digi.findAll({ where: condition });
         res.status(200).json({
             message: 'Here are all Digimons',
             result: digimons

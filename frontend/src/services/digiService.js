@@ -17,14 +17,19 @@ const getOneDigi = async (id) => {
         console.log(error.response.data)
     }
 }
-const getAllDigi = async() => {
+const getAllDigi = async(searchTerm) => {
     try {
-        const {data} = await api.get('/digimon/')
+        const {data} = await api.get('/digimon/', {
+            params: {
+                search: searchTerm
+            }
+        });
         return data
     } catch (error) {
         console.log(error)
     }
 }
+
 const getAllPre = async(id) => {
     try {
         const {data} = await api.get(`/digimon/pre/${id}`)
