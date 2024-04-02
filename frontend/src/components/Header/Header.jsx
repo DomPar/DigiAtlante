@@ -21,7 +21,7 @@ const Header = () => {
       </div>
       <div id='navbar' className='flex gap-8 flex-row text-white'>
         <button onClick={() => handleClick('/digidex')} className=''>DigiDex</button>
-        <button onClick={() => handleClick('/')}>API</button>
+        <button onClick={() => handleClick('/api')}>API</button>
         <button onClick={() => handleClick('/aboutus')}>About Us</button>
         <button onClick={() => handleClick('/create')}>Create</button>
       </div>

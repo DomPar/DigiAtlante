@@ -121,11 +121,23 @@ const getAllVar = async (req, res) => {
 
 const getOneDigimon = async (req, res) => {
     try{
-        const digimon = await Digi.findByPk(req.params.id)
-        res.status(200).json({
-            message: 'One Digimon',
-            result: digimon
-        })
+        if (typeof req.params.id == 'number'){
+            const digimon = await Digi.findByPk(req.params.id)
+            res.status(200).json({
+                message: 'One Digimon',
+                result: digimon
+            })
+        } else {
+            const digimon = await Digi.findOne({
+                where: {
+                    name: req.params.id
+                }
+            })
+            res.status(200).json({
+                message: 'One Digimon',
+                result: digimon
+            })
+        }
     }catch(error){
     res.status(500).json({
         message: 'Error getting one digimon',
