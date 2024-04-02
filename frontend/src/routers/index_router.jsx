@@ -7,6 +7,9 @@ import Digidex from "../pages/Digidex/Digidex.jsx";
 import Create from "../pages/Create/Create.jsx";
 import Login from "../pages/Login/Login.jsx";
 import Relate from "../pages/Relate/Relate.jsx";
+import Api from "../pages/Api/Api.jsx";
+import ApiGetAll from "../pages/Api/ApiGetAll.jsx";
+import ApiGetOne from "../pages/Api/ApiGetOne.jsx";
 
 const router = createBrowserRouter([
     {
@@ -40,9 +43,21 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login/>
+            },
+            {
+                path: '/api',
+                element: <Api/>
             }
         ]
-    } 
+    },
+    {
+        path: '/api/digimon',
+        element: <ApiGetAll/>
+    },
+    {
+        path: '/api/digimon/:digiId',
+        element: <ApiGetOne/>
+    }, 
 ])
 
 export default router;

@@ -1,4 +1,5 @@
 const Digi = require('../models/digimon.model')
+const { Op } = require('sequelize');
 
 const createDigimon = async (req, res) => {
 
@@ -36,7 +37,10 @@ const introduceDigi = async (req, res) => {
 
 const getAllDigimons = async (req, res) => {
     try{
-        const digimons = await Digi.findAll()
+        console.log(req.query)
+        const { search } = req.query;
+        const condition = search ? { name: { [Op.like]: `%${search}%` } } : {};
+        const digimons = await Digi.findAll({ where: condition });
         res.status(200).json({
             message: 'Here are all Digimons',
             result: digimons
@@ -121,11 +125,23 @@ const getAllVar = async (req, res) => {
 
 const getOneDigimon = async (req, res) => {
     try{
-        const digimon = await Digi.findByPk(req.params.id)
-        res.status(200).json({
-            message: 'One Digimon',
-            result: digimon
-        })
+        if (typeof (Number(req.params.id)) === 'number'){
+            const digimon = await Digi.findByPk(req.params.id)
+            res.status(200).json({
+                message: 'One Digimon',
+                result: digimon
+            })
+        } else {
+            const digimon = await Digi.findOne({
+                where: {
+                    name: req.params.id
+                }
+            })
+            res.status(200).json({
+                message: 'One Digimon',
+                result: digimon
+            })
+        }
     }catch(error){
     res.status(500).json({
         message: 'Error getting one digimon',
@@ -218,6 +234,25 @@ const addEvo = async (req, res) => {
     }
 }
 
+const addVar = async (req, res) => {
+    try {
+        const currentDigi = await Digi.findByPk(req.body.parentId);
+        const varDigi = await Digi.findByPk(req.body.variantId);
+        
+        await varDigi.addParentVar(currentDigi)
+        
+        res.status(200).json({
+            message: 'Evo set succesfully',
+            result: req.body
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error setting variant Digimon',
+            result: error
+        })
+    }
+}
+
 module.exports= {
 createDigimon,
 getAllDigimons,
@@ -226,6 +261,7 @@ updateDigimon,
 deleteDigimon,
 addPreEvo,
 addEvo,
+addVar,
 getAllPreEvo,
 getAllEvo,
 getAllVar,

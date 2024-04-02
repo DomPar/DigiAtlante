@@ -9,6 +9,7 @@ const File = () => {
   const [digi, setDigi] = useState({});
   const [pre, setPre] = useState([])
   const [evos, setEvos] = useState([])
+  const [variants, setVariants] = useState([])
   const {digiId} = useParams();
 
   useEffect(() => {
@@ -17,21 +18,21 @@ const File = () => {
       setDigi(result)
     }
     getDigi();
+    console.log(digiId)
   }, [digiId])
 
   useEffect(() => {
       
     const getPre = async () => {
        const {result} = await getAllPre(digiId)
-       console.log(result[0].ChildPre)
        setPre(result[0].ChildPre)
     }
     getPre()
    }, [digiId])
 
   const showPre = () => {
-    const result = pre.map((preevo)=>{
-      return <DigiPreCard id={preevo.id} name={preevo.name} image={preevo.image}/>
+    const result = pre.map((preevo, index)=>{
+      return <DigiPreCard key={index} id={preevo.id} name={preevo.name} image={preevo.image}/>
   })
   return result
   }
@@ -40,15 +41,30 @@ const File = () => {
       
     const getEvos = async () => {
        const {result} = await getAllEvo(digiId)
-       console.log(result[0].ChildEvo)
        setEvos(result[0].ChildEvo)
     }
     getEvos()
   }, [digiId])
   
   const showEvo = () => {
-    const result = evos.map((evo)=>{
-      return <DigiPreCard id={evo.id} name={evo.name} image={evo.image}/>
+    const result = evos.map((evo, index)=>{
+      return <DigiPreCard key={index} id={evo.id} name={evo.name} image={evo.image}/>
+  })
+  return result
+  }
+
+  useEffect(() => {
+      
+    const getVar = async () => {
+       const {result} = await getAllVar(digiId)
+       setVariants(result[0].ChildVar)
+    }
+    getVar()
+  }, [digiId])
+  
+  const showVar = () => {
+    const result = variants.map((variant, index)=>{
+      return <DigiPreCard key={index} id={variant.id} name={variant.name} image={variant.image}/>
   })
   return result
   }
@@ -63,7 +79,7 @@ const File = () => {
         </div>
       </div>
 
-      <div id="digiInfo" className='w-full h-full p-10 flex flex-col gap-2'>
+      <div id="digiInfo" className='w-full h-full p-10 flex flex-col gap-2 bg-white bg-opacity-30'>
         <div id="digiNombre" className='h-10 w-2/5 pl-2 rounded-lg flex items-center'>Name: {digi.name}</div>
         <div id="digiLevel" className='h-10 w-2/5 pl-2 rounded-lg flex items-center'>Level: {digi.level}</div>
         <div id="digiType" className='h-10 w-2/5 pl-2 rounded-lg flex items-center'>Type: {digi.type}</div>
@@ -80,7 +96,7 @@ const File = () => {
         </div>
         <div id="variantDigi" className='h-32 w-full pl-2'>
           <div>Variants:</div>
-          <div className='flex gap-2'>{showPre()}</div>
+          <div className='flex gap-2'>{showVar()}</div>
         </div>
       </div>      
     </div>
