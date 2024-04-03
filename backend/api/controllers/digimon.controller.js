@@ -70,6 +70,25 @@ const getAllDigimonsByLevel = async (req, res) => {
     }
 }
 
+const getAllDigimonsByAttribute = async (req, res) => {
+    try{
+        const { att } = req.query;
+        console.log(att)
+        const digimons = await Digi.findAll({
+            where: {atributte: att.attribute}
+        });
+        res.status(200).json({
+            message: 'Here are all Digimons by attribute',
+            result: digimons
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error getting digimons',
+            result: error
+        })
+    }
+}
+
 const getAllPreEvo = async (req, res) => {
     try{
         const digimons = await Digi.findAll({
@@ -283,5 +302,6 @@ getAllPreEvo,
 getAllEvo,
 getAllVar,
 introduceDigi,
-getAllDigimonsByLevel
+getAllDigimonsByLevel,
+getAllDigimonsByAttribute
 }

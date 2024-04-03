@@ -43,6 +43,19 @@ const getAllDigiByLevel = async(digiLevel) => {
     }
 }
 
+const getAllDigiByAttribute = async(digiAttribute) => {
+    try {
+        const {data} = await api.get('/digimon/attribute', {
+            params: {
+                att: digiAttribute
+            }
+        });
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 const getAllPre = async(id) => {
     try {
         const {data} = await api.get(`/digimon/pre/${id}`)
@@ -95,4 +108,4 @@ const addVar = async (body) => {
     }
 }
 
-export {getOneDigi, getAllDigi, getAllPre, getAllEvo, getAllVar, introduceDigi, addPre, addEvo, addVar, getAllDigiByLevel}
+export {getOneDigi, getAllDigi, getAllPre, getAllEvo, getAllVar, introduceDigi, addPre, addEvo, addVar, getAllDigiByLevel, getAllDigiByAttribute}

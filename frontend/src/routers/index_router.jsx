@@ -12,6 +12,7 @@ import ApiGetAll from "../pages/Api/ApiGetAll.jsx";
 import ApiGetOne from "../pages/Api/ApiGetOne.jsx";
 import ApiGetAllByLevel from "../pages/Api/ApiGetAllByLevel.jsx";
 import DigidexTest from "../pages/DigidexTest/DigidexTest.jsx";
+import ApiGetAllByAttribute from "../pages/Api/ApiGetAllByAttribute.jsx";
 const router = createBrowserRouter([
     {
         path: '/',
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
     {
         path: '/api/digimon/level/:level',
         element: <ApiGetAllByLevel/>
+    }, 
+    {
+        path: '/api/digimon/attribute/:attribute',
+        element: <ApiGetAllByAttribute/>
     }, 
 ])
 
