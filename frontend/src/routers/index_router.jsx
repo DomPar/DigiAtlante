@@ -11,6 +11,7 @@ import Api from "../pages/Api/Api.jsx";
 import ApiGetAll from "../pages/Api/ApiGetAll.jsx";
 import ApiGetOne from "../pages/Api/ApiGetOne.jsx";
 import ApiGetAllByLevel from "../pages/Api/ApiGetAllByLevel.jsx";
+import DigidexTest from "../pages/DigidexTest/DigidexTest.jsx";
 import ApiGetAllByAttribute from "../pages/Api/ApiGetAllByAttribute.jsx";
 const router = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/digidex',
-                element: <Digidex/>
+                element: <DigidexTest/>
             },
             {
                 path: '/create',
@@ -48,7 +49,11 @@ const router = createBrowserRouter([
             {
                 path: '/api',
                 element: <Api/>
-            }
+            },
+            {
+                path: '/testDigidex',
+                element: <DigidexTest/>
+            },
         ]
     },
     {

@@ -22,6 +22,7 @@ const Relate = () => {
     const [varName, setVarName] = useState('')
 
     const[digis, setDigis] = useState([])
+
     useEffect(() => {
       
      const getDigis = async () => {
@@ -31,9 +32,10 @@ const Relate = () => {
     getDigis()
     }, [])
 
+
     const showDigis = () =>{
         const result = digis.map((digi, index)=>{
-            return <option key={index} value={[digi.id, digi.name]}>{digi.id} - {digi.name}</option>
+            return <option key={index} value={`${digi.id}·${digi.name}`}>{digi.id} - {digi.name}</option>
         })
         return result
     }
@@ -71,8 +73,9 @@ const Relate = () => {
                             <img src={`https://digi-api.com/images/digimon/w/${currentPreName.replace(' ','_')}.png`} alt="" className='max-h-fit'/>
                         </div>
                         <select onChange={(e) => {
-                            setCurrentPreId(e.target.value[0])
-                            setCurrentPreName(e.target.value.slice(2))
+                            const [id, name] = e.target.value.split('·')
+                            setCurrentPreId(id)
+                            setCurrentPreName(name)
                         }} className='h-8'>
                             {showDigis()}
                         </select>
@@ -80,8 +83,9 @@ const Relate = () => {
                     <button onClick={handlePreClick} className='w-[100px] h-[40px] bg-[#ffb6c1] rounded-2xl'>Add Pre</button>
                     <div className='flex justify-evenly items-center w-3/6'>
                         <select onChange={(e) => {
-                            setPreId(e.target.value[0])
-                            setPreName(e.target.value.slice(2))
+                            const [id, name] = e.target.value.split('·')
+                            setPreId(id)
+                            setPreName(name)
                         }} className='h-8'>
                             {showDigis()}
                         </select>
@@ -96,8 +100,9 @@ const Relate = () => {
                             <img src={`https://digi-api.com/images/digimon/w/${currentEvoName.replace(' ','_')}.png`} alt="" className='max-h-fit'/>
                         </div>
                         <select onChange={(e) => {
-                            setCurrentEvoId(e.target.value[0])
-                            setCurrentEvoName(e.target.value.slice(2))
+                            const [id, name] = e.target.value.split('·')
+                            setCurrentEvoId(id)
+                            setCurrentEvoName(name)
                         }} className='h-8'>
                             {showDigis()}
                         </select>
@@ -105,8 +110,9 @@ const Relate = () => {
                     <button onClick={handleEvoClick} className='w-[100px] h-[40px] bg-[#ffb6c1] rounded-2xl'>Add Evo</button>
                     <div className='flex justify-evenly items-center w-3/6'>
                         <select onChange={(e) => {
-                            setEvoId(e.target.value[0])
-                            setEvoName(e.target.value.slice(2))
+                            const [id, name] = e.target.value.split('·')
+                            setEvoId(id)
+                            setEvoName(name)
                         }} className='h-8'>
                             {showDigis()}
                         </select>
@@ -121,8 +127,9 @@ const Relate = () => {
                             <img src={`https://digi-api.com/images/digimon/w/${currentVarName.replace(' ','_')}.png`} alt="" className='max-h-fit'/>
                         </div>
                         <select onChange={(e) => {
-                            setCurrentVarId(e.target.value[0])
-                            setCurrentVarName(e.target.value.slice(2))
+                            const [id, name] = e.target.value.split('·')
+                            setCurrentVarId(id)
+                            setCurrentVarName(name)
                         }} className='h-8'>
                             {showDigis()}
                         </select>
@@ -130,8 +137,9 @@ const Relate = () => {
                     <button onClick={handleVarClick} className='w-[100px] h-[40px] bg-[#ffb6c1] rounded-2xl'>Add Var</button>
                     <div className='flex justify-evenly items-center w-3/6'>
                         <select onChange={(e) => {
-                            setVarId(e.target.value[0])
-                            setVarName(e.target.value.slice(2))
+                            const [id, name] = e.target.value.split('·')
+                            setVarId(id)
+                            setVarName(name)
                         }} className='h-8'>
                             {showDigis()}
                         </select>
