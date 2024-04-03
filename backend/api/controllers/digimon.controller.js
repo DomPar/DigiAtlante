@@ -311,6 +311,5 @@ getAllEvo,
 getAllVar,
 introduceDigi,
 getAllDigimonsByLevel,
-getAllDigimonsByAttribute,
-getAllDataDigimons
+getAllDigimonsByAttribute
 }
