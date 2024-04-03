@@ -45,7 +45,7 @@ const DigidexTest = () => {
                 <option value="virus">Virus</option>
                 <option value="vaccine">Vaccine</option>
               </select>
-          </div>
+            </div>
           </div>
           {digiDex()}
         </div>
