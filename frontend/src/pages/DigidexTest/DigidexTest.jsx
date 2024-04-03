@@ -6,7 +6,8 @@ import "./DigidexTest.css"
 const DigidexTest = () => {
     const [digis, setDigis] = useState([])
     const [searchTerm, setSearchTerm] = useState('')
-    const [selectAtt, setSelectAtt] = useState('null')
+    const [selectAtt, setSelectAtt] = useState(null)
+    const [selectLevel, setSelectLevel] = useState(null)
 
     useEffect(() => {
       const getDigis = async () => {

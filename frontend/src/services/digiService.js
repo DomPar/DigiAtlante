@@ -29,6 +29,42 @@ const getAllDigi = async(searchTerm) => {
         console.log(error)
     }
 }
+const getAllDigiData = async(searchTerm) => {
+    try {
+        const {data} = await api.get('/digimon/', {
+            params: {
+                search: searchTerm
+            }
+        });
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+const getAllDigiVirus = async(searchTerm) => {
+    try {
+        const {data} = await api.get('/digimon/', {
+            params: {
+                search: searchTerm
+            }
+        });
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+const getAllDigiVaccine = async(searchTerm) => {
+    try {
+        const {data} = await api.get('/digimon/', {
+            params: {
+                search: searchTerm
+            }
+        });
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 const getAllDigiByLevel = async(digiLevel) => {
     try {
@@ -108,4 +144,18 @@ const addVar = async (body) => {
     }
 }
 
-export {getOneDigi, getAllDigi, getAllPre, getAllEvo, getAllVar, introduceDigi, addPre, addEvo, addVar, getAllDigiByLevel, getAllDigiByAttribute}
+export {getOneDigi,
+        getAllDigi,
+        getAllPre, 
+        getAllEvo, 
+        getAllVar, 
+        introduceDigi, 
+        addPre, 
+        addEvo, 
+        addVar, 
+        getAllDigiByLevel, 
+        getAllDigiByAttribute,
+        getAllDigiData,
+        getAllDigiVirus,
+        getAllDigiVaccine
+    }
