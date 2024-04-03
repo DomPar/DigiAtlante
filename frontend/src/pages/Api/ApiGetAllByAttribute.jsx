@@ -21,4 +21,4 @@ const ApiGetAllByAttribute = () => {
   )
 }
 
-export default ApiGetAllByAttribute
+export default ApiGetAllByAttribute 
