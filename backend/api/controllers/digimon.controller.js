@@ -37,29 +37,18 @@ const introduceDigi = async (req, res) => {
 
 const getAllDigimons = async (req, res) => {
     try{
-        const { search } = req.query;
-        const condition = search ? { name: { [Op.like]: `%${search}%` } } : {};
+        const { search, attribute, level } = req.query;
+        let condition = {};
+        if (search) {
+            condition.name = { [Op.like]: `%${search}%` };
+        }
+        if (attribute) {
+            condition.atributte = attribute;
+        }
+        if (level) {
+            condition.level = level;
+        }
         const digimons = await Digi.findAll({ where: condition });
-        res.status(200).json({
-            message: 'Here are all Digimons',
-            result: digimons
-        })
-    } catch (error) {
-        res.status(500).json({
-            message: 'Error getting digimons',
-            result: error
-        })
-    }
-}
-
-const getAllDataDigimons = async (req, res) => {
-    try{
-        const { search } = req.query;
-        const condition = search ? { name: { [Op.like]: `%${search}%` } } : {};
-        const digimons = await Digi.findAll({ where: {
-            ...condition,
-            atributte: 'data'
-        } });
         res.status(200).json({
             message: 'Here are all Digimons',
             result: digimons

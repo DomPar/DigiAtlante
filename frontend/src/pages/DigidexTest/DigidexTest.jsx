@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getAllDigi, getAllDigiData } from "../../services/digiService"
+import { getAllDigi } from "../../services/digiService"
 import DigiDisp from "../../components/DigiDisp/DigiDisp"
 import "./DigidexTest.css"
 
@@ -11,19 +11,11 @@ const DigidexTest = () => {
 
     useEffect(() => {
       const getDigis = async () => {
-        switch (selectAtt) {
-          case '':
-            const {result} = await getAllDigi(searchTerm)
+        const {result} = await getAllDigi(searchTerm, selectAtt, selectLevel)
             setDigis(result)
-            break;
-          case 'data':
-            const resultData = await getAllDigiData(searchTerm)
-            setDigis(resultData)
-            break;
-        }
         }
         getDigis()
-    }, [searchTerm, selectAtt])
+    }, [searchTerm, selectAtt, selectLevel])
 
     const digiDex =() =>{
         const result = digis.map((digi, index)=>{
@@ -39,7 +31,7 @@ const DigidexTest = () => {
       setSelectAtt(e.target.value)
     }
     const handleSelectLevel = (e) => {
-      setSelectAtt(e.target.value)
+      setSelectLevel(e.target.value)
     }
 
   return (
@@ -58,14 +50,14 @@ const DigidexTest = () => {
               </select>
             </div>
             <div>
-              <select value={selectAtt} onChange={(handleSelectLevel) } className="w-[100px] h-[30px] rounded-3xl pl-2 border-2 bg-transparent">
-              <option value="select">Level</option>
-                <option value="fresh">Fresh</option>
-                <option value="inTraing">In Training</option>
-                <option value="rookie">Rookie</option>
-                <option value="champion">Champion</option>
-                <option value="ultimate">Ultimate</option>
-                <option value="mega">Mega</option>
+              <select value={selectLevel} onChange={(handleSelectLevel) } className="w-[100px] h-[30px] rounded-3xl pl-2 border-2 bg-transparent">
+              <option value="">Level</option>
+                <option value="Fresh">Fresh</option>
+                <option value="In training">In Training</option>
+                <option value="Rookie">Rookie</option>
+                <option value="Champion">Champion</option>
+                <option value="Ultimate">Ultimate</option>
+                <option value="Mega">Mega</option>
               </select>
             </div>
           </div>
