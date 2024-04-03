@@ -14,7 +14,7 @@ const Header = () => {
       <div id="logoContainer">
         <div id='logo'>
           <button onClick={() => handleClick('/')} className='w-[200px] h-[100px] flex items-center justify-center'>
-            <img src="\image\logo4.png" alt="logo" className='size-[100px]'/>
+            <img src="\image\logo4.png" alt="logo" className='size-[50px]'/>
             <img src="\image\titulo.png" alt="" />
           </button>
         </div>
