@@ -42,7 +42,8 @@ const Create = () => {
                     <input type="text" autoCapitalize='on' placeholder='Level' onChange={(e) => setLevel(e.target.value)} className='w-80 h-8 mt-6 border' />
                     <input type="text" autoCapitalize='on' placeholder='Type' onChange={(e) => setType(e.target.value)} className='w-80 h-8 mt-6 border' />
                     <select onChange={(e) => setAttribute(e.target.value)} className='w-80 h-8 mt-6 border'>
-                        <option value="data" selected>Data</option>
+                        <option value="" selected>Select and attribute</option>
+                        <option value="data">Data</option>
                         <option value="vaccine" >Vaccine</option>
                         <option value="virus" >Virus</option>
                     </select>
