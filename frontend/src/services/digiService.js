@@ -31,12 +31,12 @@ const getAllDigi = async(searchTerm) => {
 }
 const getAllDigiData = async(searchTerm) => {
     try {
-        const {data} = await api.get('/digimon/', {
+        const {data} = await api.get('/digimon/data', {
             params: {
                 search: searchTerm
             }
         });
-        return data
+        return data.result
     } catch (error) {
         console.log(error)
     }

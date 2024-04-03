@@ -1,21 +1,29 @@
 import { useEffect, useState } from "react"
-import { getAllDigi } from "../../services/digiService"
+import { getAllDigi, getAllDigiData } from "../../services/digiService"
 import DigiDisp from "../../components/DigiDisp/DigiDisp"
 import "./DigidexTest.css"
 
 const DigidexTest = () => {
     const [digis, setDigis] = useState([])
     const [searchTerm, setSearchTerm] = useState('')
-    const [selectAtt, setSelectAtt] = useState(null)
-    const [selectLevel, setSelectLevel] = useState(null)
+    const [selectAtt, setSelectAtt] = useState('')
+    const [selectLevel, setSelectLevel] = useState('')
 
     useEffect(() => {
       const getDigis = async () => {
-          const {result} = await getAllDigi(searchTerm)
-          setDigis(result)
+        switch (selectAtt) {
+          case '':
+            const {result} = await getAllDigi(searchTerm)
+            setDigis(result)
+            break;
+          case 'data':
+            const resultData = await getAllDigiData(searchTerm)
+            setDigis(resultData)
+            break;
+        }
         }
         getDigis()
-    }, [searchTerm])
+    }, [searchTerm, selectAtt])
 
     const digiDex =() =>{
         const result = digis.map((digi, index)=>{
@@ -43,7 +51,7 @@ const DigidexTest = () => {
             <input type="text" onChange={handleChange} className="w-[200px] h-[30px] rounded-3xl pl-2 border-2"/>
             <div>
               <select value={selectAtt} onChange={(handleSelect) } className="w-[100px] h-[30px] rounded-3xl pl-2 border-2 bg-transparent">
-              <option value="select">Attribute</option>
+              <option value="">Attribute</option>
                 <option value="data">Data</option>
                 <option value="virus">Virus</option>
                 <option value="vaccine">Vaccine</option>
