@@ -30,6 +30,9 @@ const DigidexTest = () => {
     const handleSelect = (e) => {
       setSelectAtt(e.target.value)
     }
+    const handleSelectLevel = (e) => {
+      setSelectAtt(e.target.value)
+    }
 
   return (
     <div className="h-full flex justify-center">
@@ -39,11 +42,22 @@ const DigidexTest = () => {
             <label htmlFor="search" className="inline-block mr-2">Search:</label>
             <input type="text" onChange={handleChange} className="w-[200px] h-[30px] rounded-3xl pl-2 border-2"/>
             <div>
-              <select value={selectAtt} onChange={(handleSelect) }>
-              <option value="data">Filter by attribute</option>
+              <select value={selectAtt} onChange={(handleSelect) } className="w-[100px] h-[30px] rounded-3xl pl-2 border-2 bg-transparent">
+              <option value="select">Attribute</option>
                 <option value="data">Data</option>
                 <option value="virus">Virus</option>
                 <option value="vaccine">Vaccine</option>
+              </select>
+            </div>
+            <div>
+              <select value={selectAtt} onChange={(handleSelectLevel) } className="w-[100px] h-[30px] rounded-3xl pl-2 border-2 bg-transparent">
+              <option value="select">Level</option>
+                <option value="fresh">Fresh</option>
+                <option value="inTraing">In Training</option>
+                <option value="rookie">Rookie</option>
+                <option value="champion">Champion</option>
+                <option value="ultimate">Ultimate</option>
+                <option value="mega">Mega</option>
               </select>
             </div>
           </div>
