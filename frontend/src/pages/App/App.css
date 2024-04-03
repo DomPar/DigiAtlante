@@ -1,9 +1,9 @@
 #containerMain {
     height: 95vh;
     /* background-color: rgb(196, 255, 255); */
-    background-image: url('https://i.pinimg.com/736x/99/98/47/9998472549f88d5419e9bed11fb10c5a.jpg');
+    /* background-image: url('https://i.pinimg.com/736x/99/98/47/9998472549f88d5419e9bed11fb10c5a.jpg'); */
+    background-image: url('http://digimonespana.x10host.com/wp-content/uploads/2018/09/403167.jpg');
     /* background-image: url('https://getwallpapers.com/wallpaper/full/e/8/0/1408376-new-most-beautiful-background-1920x1200-screen.jpg'); */
     /* background-image: url('https://wallpapercave.com/wp/wp12636488.png'); */
-    background-size: cover;
     background-position: center;
 }
