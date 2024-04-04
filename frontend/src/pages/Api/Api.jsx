@@ -4,7 +4,7 @@ import { getAllDigi } from "../../services/digiService"
 const Api = () => {
 
   return (
-    <div id="dexDisplay" className="overflow-y-auto h-full w-[70vw] m-auto" style={{ background: 'linear-gradient(to bottom, rgba(176, 220, 232, 0.5), rgba(185, 207, 129, 0.5))' }}>
+    <div id="dexDisplay" className="overflow-y-auto h-full w-[70vw] m-auto bg-custom-gradient" >
       <h1 className='text-center py-3 text-2xl'>Endpoints</h1>
       <div className='flex flex-row flex-wrap w-full h-full justify-evenly items-center '>
         <div className='size-[300px] p-4 bg-[#ffccdd] border-pink-500 py-6 shadow-2xl rounded-xl'>
