@@ -38,18 +38,18 @@ const DigidexTest = () => {
     <div className="h-full flex justify-center">
       <div id="dexDisplay" className="overflow-y-auto h-full w-[70vw] bg-custom-gradient" >
         <div  className="flex flex-wrap justify-center items-center gap-2 p-2 m-auto" >
-          <div className="h-[50px] w-[70vw] m-auto flex items-center pl-16">
-            <label htmlFor="search" className="inline-block mr-2">Search:</label>
-            <input type="text" onChange={handleChange} className="w-[200px] h-[30px] rounded-3xl pl-2 border-2"/>
-            <div>
+          <div className="h-[50px] w-[70vw] m-auto flex items-center pl-16 gap-16">
+            <div className="">
+              <label htmlFor="search" className="inline-block mr-2">Search:</label>
+              <input type="text" onChange={handleChange} className="w-[200px] h-[30px] rounded-3xl pl-2 border-2"/>
+            </div>
+            <div className="flex gap-16">
               <select value={selectAtt} onChange={(handleSelect) } className="w-[100px] h-[30px] rounded-3xl pl-2 border-2 bg-transparent">
               <option value="">Attribute</option>
                 <option value="data">Data</option>
                 <option value="virus">Virus</option>
                 <option value="vaccine">Vaccine</option>
               </select>
-            </div>
-            <div>
               <select value={selectLevel} onChange={(handleSelectLevel) } className="w-[100px] h-[30px] rounded-3xl pl-2 border-2 bg-transparent">
               <option value="">Level</option>
                 <option value="Fresh">Fresh</option>
