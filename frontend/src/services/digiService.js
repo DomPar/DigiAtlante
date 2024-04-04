@@ -17,18 +17,22 @@ const getOneDigi = async (id) => {
         console.log(error.response.data)
     }
 }
-const getAllDigi = async(searchTerm) => {
+const getAllDigi = async(searchTerm, selectAtt, selectLevel) => {
     try {
         const {data} = await api.get('/digimon/', {
             params: {
-                search: searchTerm
+                search: searchTerm,
+                attribute: selectAtt,
+                level: selectLevel
             }
         });
+        console.log(data)
         return data
     } catch (error) {
         console.log(error)
     }
 }
+
 
 const getAllDigiByLevel = async(digiLevel) => {
     try {
@@ -108,4 +112,15 @@ const addVar = async (body) => {
     }
 }
 
-export {getOneDigi, getAllDigi, getAllPre, getAllEvo, getAllVar, introduceDigi, addPre, addEvo, addVar, getAllDigiByLevel, getAllDigiByAttribute}
+export {getOneDigi,
+        getAllDigi,
+        getAllPre, 
+        getAllEvo, 
+        getAllVar, 
+        introduceDigi, 
+        addPre, 
+        addEvo, 
+        addVar, 
+        getAllDigiByLevel, 
+        getAllDigiByAttribute
+    }

@@ -11,7 +11,7 @@ const Welcome = () => {
   };
 
   return (
-    <div id='containerWelcome'>
+    <div id='containerWelcome' >
       <div className={`side ${showSide1 ? 'show-side1' : 'show-side2'}`}>
         {showSide1 ? (
           <div id='side1'>

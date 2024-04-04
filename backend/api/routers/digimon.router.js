@@ -14,7 +14,7 @@ const {
     introduceDigi,
     addVar,
     getAllDigimonsByAttribute,
-    getAllDigimonsByLevel, 
+    getAllDigimonsByLevel
 } = require('../controllers/digimon.controller')
 
 router.post('/', createDigimon)
