@@ -36,7 +36,7 @@ const DigidexTest = () => {
 
   return (
     <div className="h-full flex justify-center">
-      <div id="dexDisplay" className="overflow-y-auto h-full w-[70vw]" style={{ background: 'linear-gradient(to bottom, rgba(176, 220, 232, 0.5), rgba(185, 207, 129, 0.5))' }}>
+      <div id="dexDisplay" className="overflow-y-auto h-full w-[70vw] bg-custom-gradient" >
         <div  className="flex flex-wrap justify-center items-center gap-2 p-2 m-auto" >
           <div className="h-[50px] w-[70vw] m-auto flex items-center pl-16">
             <label htmlFor="search" className="inline-block mr-2">Search:</label>
