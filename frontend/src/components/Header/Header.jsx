@@ -8,18 +8,18 @@ const Header = () => {
   const handleClick = (path) => {
     navigate(path);
   };
-
+  // bg-[#ffb6c1]
   return (
-    <div id='containerHeader' className='flex items-center bg-[#ffb6c1] justify-around'>
+    <div id='containerHeader' className='flex items-center bg-[#fecbb9] justify-around'>
       <div id="logoContainer">
         <div id='logo'>
           <button onClick={() => handleClick('/')} className='w-[200px] h-[100px] flex items-center justify-center'>
-            <img src="\image\logo5.png" alt="logo" className='size-[50px]'/>
-            <img src="\image\titulo.png" alt="" />
+            {/* <img src="\image\logo5.png" alt="logo" className='size-[50px]'/> */}
+            <img src="\image\titulo2.png" alt="" />
           </button>
         </div>
       </div>
-      <div id='navbar' className='flex gap-8 flex-row text-white'>
+      <div id='navbar' className='flex gap-8 flex-row'>
         <button onClick={() => handleClick('/digidex')} className=''>DigiDex</button>
         <button onClick={() => handleClick('/api')}>API</button>
         <button onClick={() => handleClick('/aboutus')}>About Us</button>
