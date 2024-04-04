@@ -10,7 +10,7 @@ const Header = () => {
   };
   // bg-[#ffb6c1]
   return (
-    <div id='containerHeader' className='flex items-center bg-[#fecbb9] justify-around'>
+    <div id='containerHeader' className='flex items-center justify-evenly margin-auto'>
       <div id="logoContainer">
         <div id='logo'>
           <button onClick={() => handleClick('/')} className='w-[200px] h-[100px] flex items-center justify-center'>

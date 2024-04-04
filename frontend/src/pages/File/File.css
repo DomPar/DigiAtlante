@@ -1,0 +1,29 @@
+#digiData {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(10,1fr);
+}
+
+#digiNombre {
+    grid-area: 1/1/2/2;
+}
+
+#digiLevel {
+    grid-area: 2/1/3/2;
+}
+
+#digiType {
+    grid-area: 3/1/4/2;
+}
+
+#digiAttribute {
+    grid-area: 4/1/5/2;
+}
+
+#digiAttack {
+    grid-area: 5/1/6/2;
+}
+
+#digiDescription {
+    grid-area: 1/2/11/3
+}

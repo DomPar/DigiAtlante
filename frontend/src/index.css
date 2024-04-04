@@ -18,5 +18,21 @@ body {
 }
 
 p,h1,h2,h3,h4,h5,div {
-  font-family: Oswald;
+  font-family: Orbitron;
+  font-size: large;
+  color: white; /* Color del texto */
+  text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; /* Efecto de reborde */
+}
+
+.text-with-border {
+  color: white;
+  text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 }

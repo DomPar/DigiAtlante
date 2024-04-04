@@ -59,7 +59,7 @@ const Relate = () => {
     }
 
     return (
-        <div className='flex flex-col justify-center items-center h-full w-[70vw] m-auto gradient bg-custom-gradient'>
+        <div className='flex flex-col justify-center items-center h-full w-[70vw] m-auto gradient'>
             <div id="seleccionAccion" className='flex h-[20vh] w-full justify-center items-center'>
                 <p className='bg-rose-100 w-[50px] h-[25px] text-center'></p>
                 <p onClick={()=>{navigate('/create')}} className='bg-rose-100 w-[350px] h-[25px] text-center cursor-pointer'>Introduce Digi</p>

@@ -36,28 +36,28 @@ const DigidexTest = () => {
 
   return (
     <div className="h-full flex justify-center">
-      <div id="dexDisplay" className="overflow-y-auto h-full w-[70vw] bg-custom-gradient" >
+      <div id="dexDisplay" className="overflow-y-auto h-full w-[70vw] " >
         <div  className="flex flex-wrap justify-center items-center gap-2 p-2 m-auto" >
           <div className="h-[50px] w-[70vw] m-auto flex items-center pl-16 gap-16">
             <div className="">
-              <label htmlFor="search" className="inline-block mr-2">Search:</label>
+              <label htmlFor="search" className="inline-block mr-2 text-with-border">Search:</label>
               <input type="text" onChange={handleChange} className="w-[200px] h-[30px] rounded-3xl pl-2 border-2"/>
             </div>
             <div className="flex gap-16">
-              <select value={selectAtt} onChange={(handleSelect) } className="w-[100px] h-[30px] rounded-3xl pl-2 border-2 bg-transparent">
-              <option value="">Attribute</option>
-                <option value="data">Data</option>
-                <option value="virus">Virus</option>
-                <option value="vaccine">Vaccine</option>
+              <select value={selectAtt} onChange={(handleSelect) } className="w-[130px] h-[30px] rounded-3xl pl-2 border-2 text-black">
+              <option value="" className="text-black">Attribute</option>
+                <option value="data" className="text-black">Data</option>
+                <option value="virus" className="text-black">Virus</option>
+                <option value="vaccine" className="text-black">Vaccine</option>
               </select>
-              <select value={selectLevel} onChange={(handleSelectLevel) } className="w-[100px] h-[30px] rounded-3xl pl-2 border-2 bg-transparent">
-              <option value="">Level</option>
-                <option value="Fresh">Fresh</option>
-                <option value="In training">In Training</option>
-                <option value="Rookie">Rookie</option>
-                <option value="Champion">Champion</option>
-                <option value="Ultimate">Ultimate</option>
-                <option value="Mega">Mega</option>
+              <select value={selectLevel} onChange={(handleSelectLevel) } className="w-[100px] h-[30px] rounded-3xl pl-2 border-2 text-black">
+              <option value="" className="text-black">Level</option>
+                <option value="Fresh" className="text-black">Fresh</option>
+                <option value="In training" className="text-black">In Training</option>
+                <option value="Rookie" className="text-black">Rookie</option>
+                <option value="Champion" className="text-black">Champion</option>
+                <option value="Ultimate" className="text-black">Ultimate</option>
+                <option value="Mega" className="text-black">Mega</option>
               </select>
             </div>
           </div>

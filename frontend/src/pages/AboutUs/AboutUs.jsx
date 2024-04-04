@@ -24,7 +24,7 @@ const cvDomi = () => {
   window.open(' https://www.canva.com/design/DAF_3AT0Ws4/0wEQRs6AbvU2xypurJ1fgQ/view?utm_content=DAF_3AT0Ws4&utm_campaign=designshare&utm_medium=link&utm_source=editor', '_blank');
 }
   return (
-    <div id="containerAbout" className='flex flex-col items-center justify-start pt-24 h-full w-[70vw] m-auto bg-custom-gradient'>
+    <div id="containerAbout" className='flex flex-col items-center justify-start pt-24 h-full w-[70vw] m-auto'>
         <div id="aboutUs" className='flex items-center w-[1000px]'>
             <div className='w-[600px]'>
               <h1 className='w-[400px]'>ATLANTE</h1>

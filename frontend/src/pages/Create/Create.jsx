@@ -28,7 +28,7 @@ const Create = () => {
 
 
     return (
-        <div className='flex flex-col justify-center items-center h-full w-[70vw] m-auto bg-custom-gradient' >
+        <div className='flex flex-col justify-center items-center h-full w-[70vw] m-auto' >
             <div id="seleccionAccion" className='flex h-[20vh] w-full justify-center items-center'>
                 <p className='bg-rose-100 w-[100px] h-[25px] text-center'></p>
                 <p onClick={()=>{navigate('/create')}} className='bg-rose-200 w-[350px] h-[25px] text-center cursor-pointer'>Introduce Digi</p>
