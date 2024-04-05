@@ -16,7 +16,7 @@ const ApiGetAll = () => {
     console.log(digis)
 
   return (
-    <div>{JSON.stringify(digis)}</div>
+    <div className='texto-normal'>{JSON.stringify(digis)}</div>
   )
 }
 

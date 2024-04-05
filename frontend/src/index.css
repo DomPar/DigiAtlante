@@ -17,7 +17,7 @@ body {
   height: 100vh;
 }
 
-p,h1,h2,h3,h4,h5,div {
+p,h1,h2,h3,h4,h5,div,button {
   font-family: Orbitron;
   font-size: large;
   color: white; /* Color del texto */
@@ -35,4 +35,10 @@ p,h1,h2,h3,h4,h5,div {
     1px -1px 0 black,
     -1px 1px 0 black,
     1px 1px 0 black;
+}
+
+.texto-normal {
+  font-family: sans-serif; /* Puedes cambiar esta propiedad si deseas utilizar una fuente diferente para el texto normal */
+  color: black; /* Cambia el color del texto normal según tu preferencia */
+  text-shadow: none
 }

@@ -25,7 +25,7 @@ const cvDomi = () => {
 }
   return (
     <div id="containerAbout" className='flex flex-col items-center justify-start pt-24 h-full w-[70vw] m-auto'>
-        <div id="aboutUs" className='flex items-center w-[1000px]'>
+        <div id="aboutUs" className='flex items-center w-[60vw] bg-black bg-opacity-50 p-10'>
             <div className='w-[600px]'>
               <h1 className='w-[400px]'>ATLANTE</h1>
               <p className='w-[400px]'>Somos desarrolladores full-stack que nos conocimos mientras cursábamos el programa de Full-Stack Web & Mobile Development en Reboot Academy.

@@ -21,13 +21,13 @@ const Login = () => {
   };
   return (
     <div className='flex justify-center items-center h-full '>
-      <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center w-1/5 gap-2 border bg-[#ffccdd] border-pink-500 py-6 shadow-2xl'>
+      <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center w-2/5 gap-2 bg-black bg-opacity-50 py-6 shadow-2xl'>
             <h1 className="text-3xl pb-2">LOGIN</h1>
             <label >Email:</label>
             <input type="email" id="email" placeholder=" email" name="email" onChange={(e) => setEmail(e.target.value)} required />
             <label >Password:</label>
             <input type="password" id="password" placeholder=" password" name="password" onChange={(e) => setPassword(e.target.value)}required/>
-            <button type="submit" onClick={handleSubmit} className='w-20 border border-sky-500 rounded-full mt-4'>Submit</button>      
+            <button type="submit" onClick={handleSubmit} className='w-[100px] h-[40px] border rounded-full mt-4'>Submit</button>      
         </form>
     </div>
   );
