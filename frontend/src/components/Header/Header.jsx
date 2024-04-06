@@ -10,12 +10,12 @@ const Header = () => {
   };
   // bg-[#ffb6c1]
   return (
-    <div id='containerHeader' className='flex items-center bg-[#fecbb9] justify-around'>
+    <div id='containerHeader' className='flex items-center justify-evenly margin-auto'>
       <div id="logoContainer">
         <div id='logo'>
           <button onClick={() => handleClick('/')} className='w-[200px] h-[100px] flex items-center justify-center'>
             {/* <img src="\image\logo5.png" alt="logo" className='size-[50px]'/> */}
-            <img src="\image\titulo2.png" alt="" />
+            <img src="\image\titulo.png" className='' />
           </button>
         </div>
       </div>
