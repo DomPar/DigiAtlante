@@ -61,10 +61,10 @@ const Relate = () => {
     return (
         <div className='flex flex-col justify-center items-center h-full w-[70vw] m-auto gradient'>
             <div id="seleccionAccion" className='flex h-[20vh] w-full justify-center items-center'>
-                <p className='bg-black bg-opacity-50 w-[50px] h-[25px] text-center'></p>
+                <p className='bg-black bg-opacity-50 w-[100px] h-[25px] text-center'></p>
                 <p onClick={()=>{navigate('/create')}} className='bg-black bg-opacity-50 w-[350px] h-[25px] text-center cursor-pointer'>Introduce Digi</p>
                 <p onClick={()=>{navigate('/relate')}} className='bg-black bg-opacity-80 w-[350px] h-[25px] text-center cursor-pointer'>Relate Digi</p>
-                <p className='bg-black bg-opacity-50 w-[50px] h-[25px] text-center'></p>
+                <p className='bg-black bg-opacity-50 w-[100px] h-[25px] text-center'></p>
             </div>
             <div className='flex flex-col justify-center items-center w-full h-[80vh] gap-10'>
                 <div id="preEvo" className='flex justify-between items-center w-[60vw] bg-black bg-opacity-50 p-2'>
