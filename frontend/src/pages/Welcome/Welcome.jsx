@@ -1,17 +1,28 @@
 import React from 'react';
 import './Welcome.css'; 
-
+import { useNavigate } from 'react-router-dom';
 const Welcome = () => {
-  
+  const navigate = useNavigate();
+
+  const handleClick = (path) => {
+    navigate(path);
+  };
   return (
     <main id='containerWelcome' className='relative h-full'>
-      {/* <div id='info' className='absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center '>
-        <h1 className='text-4xl text-white uppercase'>Welcome To Digital World</h1> 
+      <div className='flex flex-col items-end'>
+        <div className=''>
+        <div >
+          <img src="\image\titulo.png" alt="titulo"  className='w-[500px] h-[200px]'/>
+        </div>
+        <div className='flex flex-col items-center'>
+          <p >A digimon api with its own digidex</p> 
+        </div>
+        <div>
+          <button onClick={()=> handleClick('/digidex')}>Digidex</button>
+          <button onClick={()=>handleClick('/api')}>Api</button>
+        </div>
+        </div>
       </div>
-      <video autoPlay loop muted className='absolute inset-0 w-full h-full object-cover'>
-        <source src='/animation/abandoned-Train.mp4' type='video/mp4' />
-      </video>
-      <div id='layer' className='absolute inset-0 bg-[#1c1c1d] opacity-30 mix-blend-overlay'></div> */}
     </main> 
   );
 };
