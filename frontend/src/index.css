@@ -22,10 +22,10 @@ p,h1,h2,h3,h4,h5,div,button {
   font-size: large;
   color: white; /* Color del texto */
   text-shadow: 
-    -1px -1px 0 black,  
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black; /* Efecto de reborde */
+    -1px -1px 0 green,  
+    1px -1px 0 green,
+    -1px 1px 0 green,
+    1px 1px 0 green; /* Efecto de reborde */
 }
 
 .text-with-border {
