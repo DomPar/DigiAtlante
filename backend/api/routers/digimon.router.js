@@ -14,7 +14,8 @@ const {
     introduceDigi,
     addVar,
     getAllDigimonsByAttribute,
-    getAllDigimonsByLevel
+    getAllDigimonsByLevel,
+    getAllDigimonsById
 } = require('../controllers/digimon.controller')
 
 router.post('/', createDigimon)
@@ -28,6 +29,8 @@ router.post('/evo', addEvo)
 router.post('/var', addVar)
 
 router.get('/', getAllDigimons)
+
+router.get('/id', getAllDigimonsById)
 
 router.get('/level/', getAllDigimonsByLevel)
 
