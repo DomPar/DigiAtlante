@@ -13,7 +13,7 @@ const Header = () => {
     navigate(path);
   };
   return (
-    <div id='containerHeader' className='flex items-center justify-evenly margin-auto'>
+    <div id='containerHeader' className='flex items-center justify-evenly margin-auto w-[70%]'>
       <div id="logoContainer">
         <div id='logo'>
           <button onClick={() => handleClick('/')} className='w-[200px] h-[100px] flex items-center justify-center'>
@@ -22,10 +22,10 @@ const Header = () => {
         </div>
       </div>
       <div id='navbar' className='flex gap-8 flex-row'>
-        <button onClick={() => handleClick('/digidex')} className='text-with-border'>DigiDex</button>
-        <button onClick={() => handleClick('/api')} className='text-with-border'>API</button>
-        <button onClick={() => handleClick('/aboutus')} className='text-with-border'>About Us</button>
-        {isAdmin && <button onClick={() => handleClick('/create')} className='text-with-border'>Create</button>}
+        <button onClick={() => handleClick('/digidex')} className='text-with-border text-2xl'>DigiDex</button>
+        <button onClick={() => handleClick('/api')} className='text-with-border text-2xl'>API</button>
+        <button onClick={() => handleClick('/aboutus')} className='text-with-border text-2xl'>About Us</button>
+        {isAdmin && <button onClick={() => handleClick('/create')} className='text-with-border text-2xl'>Create</button>}
       </div>
       <div className=''>
         {!isAdmin && <button onClick={() => handleClick('/login')}><LoginIcon /></button>}

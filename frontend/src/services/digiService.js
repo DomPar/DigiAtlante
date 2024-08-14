@@ -26,13 +26,21 @@ const getAllDigi = async(searchTerm, selectAtt, selectLevel) => {
                 level: selectLevel
             }
         });
-        console.log(data)
         return data
     } catch (error) {
         console.log(error)
     }
 }
 
+const getAllDigiListedById = async() => {
+    try {
+        const {data} = await api.get('/digimon/id');
+        console.log(data)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 const getAllDigiByLevel = async(digiLevel) => {
     try {
@@ -122,5 +130,6 @@ export {getOneDigi,
         addEvo, 
         addVar, 
         getAllDigiByLevel, 
-        getAllDigiByAttribute
+        getAllDigiByAttribute,
+        getAllDigiListedById
     }
