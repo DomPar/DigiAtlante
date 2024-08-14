@@ -70,7 +70,7 @@ const File = () => {
   }
 
   return (
-    <div id='containerFile' className='w-[70vw] h-full flex'>
+    <div id='containerFile' className='w-[70%] h-full flex'>
       <div id="digiImageContainer" className='w-full h-full flex justify-center items-center'>
         <div id="digiImageDevice" className='bg-black bg-opacity-50 flex justify-center items-center'>
           <div id="digiImage" className='flex justify-center items-center relative'>

@@ -27,9 +27,8 @@ const cvDomi = () => {
     <div id="containerAbout" className='flex flex-col items-center justify-start pt-24 h-full w-[70vw] m-auto'>
         <div id="aboutUs" className='flex items-center w-[60vw] bg-black bg-opacity-50 p-10'>
             <div className='w-[600px]'>
-              <h1 className='w-[400px]'>ATLANTE</h1>
-              <p className='w-[400px]'>Somos desarrolladores full-stack que nos conocimos mientras cursábamos el programa de Full-Stack Web & Mobile Development en Reboot Academy.
-              Tras completar esta experiencia formativa, decidimos unir fuerzas y trabajar juntos en diversos proyectos. Atlante nace de la necesididad de poner en practica todo lo aprendido durante la experiencia del bootcamp y de poner en prácticas nuevas tecnologías.</p>
+              <h1 className='w-[400px] text-with-border'>ATLANTE</h1>
+              <p className='w-[400px]'>We are full-stack developers who met while attending the Full-Stack Web & Mobile Development program at Reboot Academy. After completing this formative experience, we decided to join forces and collaborate on various projects. Atlante was born out of the need to apply everything we learned during the bootcamp and to experiment with new technologies.</p>
               <div className='flex w-[600px] justify-start pt-24 gap-8'>
                 <div id="aaron">
                   <h3>Aarón González Santana</h3>

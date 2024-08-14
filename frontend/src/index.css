@@ -31,10 +31,10 @@ p,h1,h2,h3,h4,h5,div,button {
 .text-with-border {
   color: white;
   text-shadow: 
-    -1px -1px 0 black,  
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
+    -2px -2px 0 black,  
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
 }
 
 .texto-normal {
