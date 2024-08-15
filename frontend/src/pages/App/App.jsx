@@ -5,14 +5,11 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 
 
-
 function App() {
-
-
   return (
     <>
-      <div className='relative h-full w-full flex justify-center'>
-        <video autoPlay loop muted className='absolute inset-0 w-full h-full object-cover'>
+      <div className='relative w-full h-screen flex justify-center items-center overflow-hidden'>
+        <video autoPlay loop muted className='absolute inset-0 min-w-full min-h-full object-cover'>
           <source src='/animation/abandoned-Train.mp4' type='video/mp4' />
         </video>
         <div id='layer' className='absolute inset-0 bg-[#1c1c1d] opacity-30 mix-blend-overlay'></div>
