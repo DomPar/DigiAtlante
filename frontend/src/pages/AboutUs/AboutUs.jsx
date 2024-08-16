@@ -25,11 +25,11 @@ const cvDomi = () => {
 }
   return (
     <div id="containerAbout" className='flex flex-col items-center justify-start pt-24 h-full w-[70vw] m-auto'>
-        <div id="aboutUs" className='flex items-center w-[60vw] bg-black bg-opacity-50 p-10'>
-            <div className='w-[600px]'>
+        <div id="aboutUs" className='flex items-center  bg-black bg-opacity-50 p-10'>
+            <div className='flex flex-col items-center w-[600px]'>
               <h1 className='w-[400px] text-with-border'>ATLANTE</h1>
               <p className='w-[400px]'>We are full-stack developers who met while attending the Full-Stack Web & Mobile Development program at Reboot Academy. After completing this formative experience, we decided to join forces and collaborate on various projects. Atlante was born out of the need to apply everything we learned during the bootcamp and to experiment with new technologies.</p>
-              <div className='flex w-[600px] justify-start pt-24 gap-8'>
+              <div className='flex w-[600px] justify-center pt-24 gap-8'>
                 <div id="aaron">
                   <h3>Aarón González Santana</h3>
                   <button onClick={lkAaron} className=''><LinkedInIcon/></button>
@@ -42,10 +42,7 @@ const cvDomi = () => {
                 </div>
               </div>
             </div>
-            {/* imagen nuestra */}
-            <img src="" alt="" className='size-[400px] '/>
         </div>
-        
     </div>
   )
 }
