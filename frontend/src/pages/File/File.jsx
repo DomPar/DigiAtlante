@@ -70,17 +70,15 @@ const File = () => {
   }
 
   return (
-    <div id='containerFile' className='w-[70%] h-full flex'>
+    <div id='containerFile' className='w-[70%] h-full flex sm:flex-col'>
       <div id="digiImageContainer" className='w-full h-full flex justify-center items-center'>
         <div id="digiImageDevice" className='bg-black bg-opacity-50 flex justify-center items-center'>
           <div id="digiImage" className='flex justify-center items-center relative'>
-          <div class="absolute inset-0 bg-black bg-opacity-10"></div>
-            <img src={digi.image} alt="" className='w-[400px] h-[400px] m-12'/>
-            
-          </div>
+            <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+              <img src={digi.image} alt="" className='w-[400px] h-[400px] m-12'/>
+            </div>
         </div>
       </div>
-
       <div id="digiInfo" className='w-full h-[90vh] p-10 flex flex-col gap-2 bg-black bg-opacity-50 text-with-border'>
         <div id="digiData" className=' h-3/6'>
           <div id="digiNombre" className='pl-2 rounded-lg'>Name: {digi.name}</div>

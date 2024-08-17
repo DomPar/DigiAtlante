@@ -13,7 +13,7 @@ const Header = () => {
     navigate(path);
   };
   return (
-    <div id='containerHeader' className='flex items-center justify-evenly margin-auto w-[70%]'>
+    <div id='containerHeader' className='flex items-center justify-evenly sm:!justify-around w-[70%] sm:!w-full'>
       <div id="logoContainer">
         <div id='logo'>
           <button onClick={() => handleClick('/')} className='w-[200px] h-[100px] flex items-center justify-center'>
