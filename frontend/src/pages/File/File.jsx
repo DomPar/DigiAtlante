@@ -81,24 +81,24 @@ const File = () => {
       </div>
       <div id="digiInfo" className='w-full h-[90vh] p-10 flex flex-col gap-2 bg-black bg-opacity-50 text-with-border'>
         <div id="digiData" className=' h-3/6'>
-          <div id="digiNombre" className='pl-2 rounded-lg'>Name: {digi.name}</div>
-          <div id="digiLevel" className='pl-2 rounded-lg'>Level: {digi.level}</div>
-          <div id="digiType" className='pl-2 rounded-lg'>Type: {digi.type}</div>
-          <div id="digiAttribute" className='pl-2 rounded-lg'>Attribute: {digi.atributte}</div>
-          <div id="digiAttack" className='pl-2 rounded-lg'>Attack: {digi.attack}</div>
+          <div id="digiNombre" className='pl-2 rounded-lg'>NAME: {digi.name}</div>
+          <div id="digiLevel" className='pl-2 rounded-lg'>LEVEL: {digi.level}</div>
+          <div id="digiType" className='pl-2 rounded-lg'>TYPE: {digi.type}</div>
+          <div id="digiAttribute" className='pl-2 rounded-lg'>ATTRIBUTE: {digi.atributte}</div>
+          <div id="digiAttack" className='pl-2 rounded-lg'>ATTACK: {digi.attack}</div>
           <div id="digiDescription" className='h-32 w-5/6 pl-2 rounded-lg'>{digi.description}</div>
         </div> 
         <div id="digiEvos">
           <div id="preEvoDigi" className='h-28 w-full pl-2'>
-            <div className='mb-2'>Pre-Evolutions:</div>
+            <div className='mb-2'>PRE-EVOLUTIONS:</div>
             <div className='flex gap-2'>{showPre()}</div>
           </div>
           <div id="evoDigi" className='h-28 w-full pl-2'>
-            <div className='mb-2'>Evolutions:</div>
+            <div className='mb-2'>EVOLUTIONS:</div>
             <div className='flex gap-2'>{showEvo()}</div>
           </div>
           <div id="variantDigi" className='h-28 w-full pl-2'>
-            <div className='mb-2'>Variants:</div>
+            <div className='mb-2'>VARIANTS:</div>
             <div className='flex gap-2'>{showVar()}</div>
           </div>
         </div>
