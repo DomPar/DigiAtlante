@@ -17,7 +17,7 @@ const ApiGetAllByLevel = () => {
 }, [])
 
   return (
-    <div>{JSON.stringify(digis)}</div>
+    <div className='texto-normal'>{JSON.stringify(digis)}</div>
   )
 }
 

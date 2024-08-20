@@ -14,7 +14,7 @@ const ApiGetOne = () => {
         getDigi();
       }, [digiId])
   return (
-    <div>{JSON.stringify(digi)}</div>
+    <div className='texto-normal'>{JSON.stringify(digi)}</div>
   )
 }
 
