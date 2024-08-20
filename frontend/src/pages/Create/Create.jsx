@@ -16,7 +16,7 @@ const Create = () => {
 
     const sendData = async () =>{
         await introduceDigi({
-            name, 
+            name: `${name.replace('_',' ')}`, 
             level, 
             type, 
             atributte: attribute, 
