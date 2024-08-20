@@ -70,7 +70,7 @@ const File = () => {
   }
 
   return (
-    <div id='containerFile' className='w-[70%] h-full flex sm:flex-col'>
+    <div id='containerFile' className='w-[80%] h-[90%] flex m-auto sm:flex-col'>
       <div id="digiImageContainer" className='w-full h-full flex justify-center items-center'>
         <div id="digiImageDevice" className='bg-black bg-opacity-50 flex justify-center items-center'>
           <div id="digiImage" className='flex justify-center items-center relative'>
@@ -79,8 +79,8 @@ const File = () => {
             </div>
         </div>
       </div>
-      <div id="digiInfo" className='w-full h-[90vh] p-10 flex flex-col gap-2 bg-black bg-opacity-50 text-with-border'>
-        <div id="digiData" className=' h-3/6'>
+      <div id="digiInfo" className='w-full h-full p-10 flex flex-col gap-2 bg-black bg-opacity-50 text-with-border'>
+        <div id="digiData" className='h-3/6 flex gap-8'>
           <div id="digiNombre" className='pl-2 rounded-lg'>NAME: {digi.name}</div>
           <div id="digiLevel" className='pl-2 rounded-lg'>LEVEL: {digi.level}</div>
           <div id="digiType" className='pl-2 rounded-lg'>TYPE: {digi.type}</div>

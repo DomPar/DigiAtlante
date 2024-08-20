@@ -22,7 +22,7 @@ const Welcome = () => {
   return (
     <main id='containerWelcome' className='flex flex-col items-center m-auto bg-black bg-opacity-50 w-[70%] h-[90%] sm:w-full '>
         <div className='w-[90%] h-[90%] flex flex-col items-center'>
-          <img src="\image\titulo.png" alt="titulo" className='h-[20%] w-[70%]'/>
+          <img src="\image\titulo2.png" alt="titulo" className='h-[20%] w-[70%]'/>
           <div className='h-[80%] grid grid-cols-12 grid-rows-12 sm:overflow-auto sm:flex sm:flex-col'>
             <div className='row-start-2 row-end-12 col-start-2 col-end-6
                             sm:flex sm:flex-col'>
